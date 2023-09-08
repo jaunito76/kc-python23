@@ -1,13 +1,15 @@
 #Type your homework here
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
-
 g=0
-f=float(input('Enter a float or int: '))
-while (g*g)<f:
-    g=g+0.00001
+f=float(input('Enter a float or int for a suare root (or kindly jump off a cliff please): '))
+while (g**3)<f:
+    g=g+0.00000001
+    print(g)
 print(g)
+n=float(input('enter a number to count:'))
+m=0
+while m<n:
+    m=m+1
+    print(m)
+print(m)
+x=float(input('enter a number to primetize:'))
+p=2
