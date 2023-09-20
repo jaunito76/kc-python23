@@ -6,9 +6,9 @@ Note: Do not be intimidated by this problem! It's actually easier than it looks.
 
 For this problem, you will implement a variation of the classic wordgame Hangman. For those of you who are unfamiliar with the rules, you may read all about it here. In this problem, the second player will always be the computer, who will be picking a word at random.
 
-In this problem, you will implement a function, called hangman, that will start up and carry out an interactive Hangman game between a player and the computer. Before we get to this function, we'll first implement a few helper functions to get you going.
+In this problem, you will implement a **function**, called hangman, that will start up and carry out an interactive Hangman game between a player and the computer. Before we get to this function, we'll first implement a few helper functions to get you going.
 
-For this problem, you will need the code files ps3_hangman.py and words.txt. Right-click on each and hit "Save Link As". Be sure to save them in same directory. Open and run the file ps3_hangman.py without making any modifications to it, in order to ensure that everything is set up correctly. By "open and run" we mean do the following:
+For this problem, you will need the code files [_ps3_hangman.py_](ps3_hangman.py) and [_words.txt_](words.txt). Right-click on each and hit "Save Link As". Be sure to save them in same directory. Open and run the file ps3_hangman.py without making any modifications to it, in order to ensure that everything is set up correctly. By "open and run" we mean do the following:
 
 Go to your IDE. From the File menu, choose "Open".
 Find the file ps3_hangman.py and choose it.
@@ -24,7 +24,7 @@ For example, if you saved ps3_hangman.py and words.txt in the directory "C:/User
 
 WORDLIST_FILENAME = "words.txt"  to something like
 
-WORDLIST_FILENAME = "C:/Users/Ana/words.txt"
+WORDLIST_FILENAME = "C:/Users/grandpacarlsharkmaker/words.txt"
 
 This folder will vary depending on where you saved the files.
 
