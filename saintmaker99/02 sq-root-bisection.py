@@ -5,7 +5,7 @@ by using a bisection search in Chap 3 of your textbook.
 num_geussses=0
 epsilon=0.00001
 low=0
-f=float(input('Enter a float or int for a suare root please:'))
+f=float(input('Enter a float or int for a square root please:'))
 high=max(1, f)
 ans=(high+low)/2
 while abs(ans**2-f)>=epsilon:
@@ -17,6 +17,6 @@ while abs(ans**2-f)>=epsilon:
         high=ans
     ans=(high+low)/2
 print('number of guesses',num_geussses)
-#print(num_geussses)
+print(num_geussses)
 print('answer',ans)
-#print(ans)
+print(ans)
