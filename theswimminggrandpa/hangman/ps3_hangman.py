@@ -110,5 +110,5 @@ def hangman(secretWord):
 # and run this file to test! (hint: you might want to pick your own
 # secretWord while you're testing)
 
-# secretWord = chooseWord(wordlist).lower()
+secretWord = chooseWord(wordlist).lower()
 # hangman(secretWord)
