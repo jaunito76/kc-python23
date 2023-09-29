@@ -11,15 +11,19 @@ each iteration, and then at the end it will print out:
 '''
 g = 50
 gn = 0
-
+high=100
+low=0
+ans=50
 c = 0
 while c != 'e':
     c = input(f'The computor guesses {g}, \nHigher, lower or exactly (h,l,e): ')
     if c == 'h':
-        g = int(g*1.5)
+        low=ans
+        g = int(ans*1.5)
         gn = gn+1
     elif c == 'l':
-        g = int(g/2)
+        high=ans
+        g = int(ans/2)
         gn = gn+1
     elif c == 'e':
-        print('Your answer is: ', g, 'The computer took', gn, 'guess(es)')
+        print('Your answer is: ', ans, 'The computer took', gn, 'guess(es)')
