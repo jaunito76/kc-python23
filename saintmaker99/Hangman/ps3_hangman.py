@@ -56,11 +56,11 @@ def isWordGuessed(secretWord, lettersGuessed):
     #     set to true
     #   else
     #     false
-    x=True
+    googabooga=True
     for letter in secretWord:
-        if  letter not in lettersGuessed:
-            x=False
-        return x
+        if not letter in lettersGuessed:
+            googabooga=False
+    return googabooga
     
 def getGuessedWord(secretWord, lettersGuessed):
     '''
@@ -150,7 +150,7 @@ def hangman(secretWord):
       if isWordGuessed(secretWord, lettersguessed)==True:
         print('YOU WIN!!!. your word was', secretWord)
       elif nog==0:
-        print('out of guesses, oh well better luck next time.')
+        print('out of guesses, oh well better luck next time. Your wod was',secretWord)
       else:
          print('try again, your word so far is', getGuessedWord(secretWord, lettersguessed), 'here are the letters left to use',getAvailableLetters(lettersguessed), 'and you have',nog,'guesses left')
 
