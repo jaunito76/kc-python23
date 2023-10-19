@@ -95,7 +95,7 @@ def getAvailableLetters(lettersGuessed):
         for c in lettersGuessed:
             letters = letters.replace(c,'_')
         return letters
-        print(letters)
+        # print(letters)
 
 def hangman(secretWord):
     '''
