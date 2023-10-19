@@ -56,11 +56,11 @@ def isWordGuessed(secretWord, lettersGuessed):
     #     set to true
     #   else
     #     false
-    x=True
+    googabooga=True
     for letter in secretWord:
-        if  letter not in lettersGuessed:
-            x=False
-        return x
+        if not letter in lettersGuessed:
+            googabooga=False
+    return googabooga
     
 def getGuessedWord(secretWord, lettersGuessed):
     '''
@@ -97,30 +97,18 @@ def getAvailableLetters(lettersGuessed):
     '''
     # FILL IN YOUR CODE HERE...
     
-    oogabooga = 'a b c d e f g h i j k l m o n p q r s t u v w x y z'
+    oogabooga = 'a b c d e f g h i j k l m n o p q r s t u v w x y z'
     for letter in lettersGuessed:
         if letter in oogabooga:
             oogabooga= oogabooga.replace(letter,'_')
     return oogabooga 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def nognog(secretword, lettersGuessed):
+    nog=8
+    for letter in lettersGuessed:
+        if letter not in secretword:
+            nog=nog-1
+    return nog
 
 
 def hangman(secretWord):
@@ -144,8 +132,29 @@ def hangman(secretWord):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE...
-
-
+    yn='n'
+    while yn=='n':
+      print('Hello, would you like to play a game of hangman with me y/n')
+      yn=input('y/n           ')
+    hml=len(secretWord)
+    print('there are',hml, 'letters in this word')
+    nog=7
+    lettersguessed=''
+    while nog>0 and not isWordGuessed(secretWord, lettersguessed):
+      ta=input('enter a letter        ')
+      if ta in lettersguessed:
+        print('oops, it looks like you already entered that letter, try again')
+      else:
+        lettersguessed=lettersguessed+ta    
+      nog=(nognog(secretWord, lettersguessed))
+      if isWordGuessed(secretWord, lettersguessed)==True:
+        print('YOU WIN!!!. your word was', secretWord)
+      elif nog==0:
+        print('out of guesses, oh well better luck next time. Your wod was',secretWord)
+      else:
+         print('try again, your word so far is', getGuessedWord(secretWord, lettersguessed), )
+         print('here are the letters left to use',getAvailableLetters(lettersguessed), )
+         print('and you have',nog,'guesses left')
 
 
 
@@ -155,8 +164,232 @@ def hangman(secretWord):
 # secretWord while you're testing)
 
 secretWord = chooseWord(wordlist).lower()
-# hangman(secretWord)
-isWordGuessed('apple', ['a', 'p', 'q'])
+hangman(secretWord)
+#isWordGuessed('apple', ['a', 'p', 'q'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

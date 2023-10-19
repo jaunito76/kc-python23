@@ -218,7 +218,7 @@ _Hint: You might consider using string.ascii_lowercase, which is a string compri
 	> import string
 	> print(string.ascii_lowercase)
 	abcdefghijklmnopqrstuvwxyz
-
+ 
 ## Problem 4 - The Game
 _15.0 points (graded)_
 Now you will implement the function hangman, which takes one parameter - the secretWord the user is to guess. This starts up an interactive game of Hangman between the user and the computer. Be sure you take advantage of the three helper functions, isWordGuessed, getGuessedWord, and getAvailableLetters, that you've defined in the previous part.
