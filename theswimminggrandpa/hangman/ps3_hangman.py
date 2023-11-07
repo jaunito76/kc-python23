@@ -150,4 +150,4 @@ def hangman(secretWord):
 
 secretWord = chooseWord(wordlist).lower()
 # hangman(secretWord)
-hangman('its')
+hangman('tuataras')
