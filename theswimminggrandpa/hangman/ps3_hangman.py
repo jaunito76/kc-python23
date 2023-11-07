@@ -55,7 +55,7 @@ def isWordGuessed(secretWord, lettersGuessed):
     for letter in secretWord:
         if letter not in lettersGuessed:
             guessed = False
-        return guessed 
+    return guessed 
 
 
 
@@ -132,6 +132,7 @@ def hangman(secretWord):
             print('your guess was correct')
         if letter not in lettersGuessed:
             lettersGuessed += letter
+        # print(lettersGuessed)
         if isWordGuessed(secretWord,lettersGuessed):
             print("you won!")
             break
