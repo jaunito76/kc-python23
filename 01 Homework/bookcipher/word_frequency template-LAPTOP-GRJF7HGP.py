@@ -10,11 +10,24 @@ def word_frequency(file_name: str) -> dict:
         {<WORD: str>: <count_of_word: int>} that contains the 
         number of times a word is used in the file above
     """
-    #   Open the file
-    #   read the file
-    #   close the file
-    #   Make the list of words from the file
-    #   Loop through all the words
+
+    def get_list_from_file(file_name: str) -> list:
+        mylist = []
+        with open(file_name, 'r', encoding='utf8') as file:
+            for line in file:
+                mylist += line.split()
+        return mylist
+
+    word_counter = {}
+    for word in get_list_from_file(file_name):
+        if word in word_counter:
+            
+
+    #   [x] Open the file
+    #   [x] read the file
+    #   [x] close the file
+    #   [x] Make the list of words from the file
+    #   [x] Loop through all the words
     #       # Count each word 
     #       If I've seen the word ->
     #           add to the dictionary value
