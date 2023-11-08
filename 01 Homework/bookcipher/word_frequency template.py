@@ -1,6 +1,7 @@
-BOOK = 'don-quixote.txt'
+import sys
+import argparse
 
-
+BOOK = 'minotaur.txt'
 
 def word_frequency(file_name: str) -> dict:
     """
@@ -21,6 +22,28 @@ def word_frequency(file_name: str) -> dict:
     #       Else
     #           Add word (key) to the dictionary
     #   Return dict
+    def get_word_list(file_name: str) -> list:
+        """
+        """
+        with open(file_name, 'r', encoding='utf8') as daniels_book:
+            return [word for line in daniels_book for word in line.split()]
+        
+    def remove_punctuation(word: str) -> str:
+        new_word = ''
+        for chr in word:
+            if chr.lower() in 'abcdefghijklmnopqrstuvwxyz':
+                new_word += chr
+        return new_word
+
+    word_list = [remove_punctuation(word).lower() for word in get_word_list(file_name)]
+    #print(word_list)
+    mydict = {}
+    for word in word_list:
+        if word in mydict:
+            mydict[word] += 1
+        else:
+            mydict[word] = 1
+    return mydict
 
 def sort_by_frequency(frequency):
     """
@@ -32,16 +55,30 @@ def sort_by_frequency(frequency):
         For Extra Credit:
         Use a lambda function to sort the dictionary 
     """
-    sorted_frequency = sorted(frequency.items(), key=lambda item: item[1], reverse=True)
+    sorted_frequency =  sorted(frequency.items(), key=lambda item: item[1], reverse=True)
     return sorted_frequency
 
+def get_arguments():
+    argParser = argparse.ArgumentParser()
+    argParser.add_argument('-i', '--input', help='input filename')
+    argParser.add_argument('-o', '--output', help='output filename')
+    return argParser.parse_args()
+
 def main():
+    args = get_arguments()
+    if args.input != "":
+        BOOK = args.input
+    if args.output != "":
+        try: 
+            old_std, sys.stdout = sys.stdout, open(args.output, 'w')
+        except:
+            print(' ** Unable to open the file **')
+                
     frequency = word_frequency(BOOK)
-    print(frequency)
     sorted_frequency = sort_by_frequency(frequency)
     for word, freq in sorted_frequency:
         freq_txt = f'Frequency: {freq}'
-        print(f'Word: {word:25s} {freq_txt:15s}')
+        #print(f'Word: {word:25s} {freq_txt:15s}')
 
 if __name__ == "__main__":
     main()
