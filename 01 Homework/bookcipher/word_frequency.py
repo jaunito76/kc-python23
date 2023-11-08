@@ -1,7 +1,7 @@
 import sys
 import argparse
 
-BOOK = 'minotaur.txt'
+BOOK = 'large_file.txt'
 
 def word_frequency(file_name: str) -> dict:
     """
@@ -66,20 +66,21 @@ def get_arguments():
 
 def main():
     args = get_arguments()
-    if args.input != "":
-        BOOK = args.input
-    if args.output != "":
+    fn = BOOK
+    if not args.input is None:
+        print("*********** args.input: ", args.input)
+        fn = args.input
+    if not args.output is None:
         try: 
             old_std, sys.stdout = sys.stdout, open(args.output, 'w')
         except:
             print(' ** Unable to open the file **')
-                
-    frequency = word_frequency(BOOK)
+    print(f'File name is: {fn}')
+    frequency = word_frequency(fn)
     sorted_frequency = sort_by_frequency(frequency)
     for word, freq in sorted_frequency:
         freq_txt = f'Frequency: {freq}'
-        #print(f'Word: {word:25s} {freq_txt:15s}')
+        print(f'Word: {word:25s} {freq_txt:15s}')
 
 if __name__ == "__main__":
     main()
-print('I suck toeses')
