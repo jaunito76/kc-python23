@@ -1,4 +1,3 @@
-import pytest
 import word_frequency as wf
 
 def test_empty_file():
@@ -18,7 +17,10 @@ def test_punctuation():
 
 def test_large_file():
     frequency = wf.word_frequency('large_file.txt')
-    assert frequency == {'the':1000, 'and':500, 'a':301}
+    assert frequency == {'the':1000, 'and':500, 'a':300}
+    
+def test_sorted():
+    frequency = wf.word_frequency('large_file.txt')
     sorted_frequency = wf.sort_by_frequency(frequency)
     # Check the first few words and their frequencies
     assert sorted_frequency[:3] == [('the', 1000), ('and', 500), ('a', 300)]
