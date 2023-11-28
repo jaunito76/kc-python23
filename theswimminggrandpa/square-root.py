@@ -3,7 +3,7 @@
 Created on Mon Sep  4 20:34:53 2023
 @author: corrietinsley
 """
-x=float(input('please enter number'))
+x=float(input('enter a number or die'))
 guess=0.0
 epsilon=0.0001
 while (guess * guess < x):
