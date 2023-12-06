@@ -1,6 +1,3 @@
-import sys
-import argparse
-
 BOOK = "words.txt"
 
 
@@ -89,4 +86,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-print('I suck toes')
