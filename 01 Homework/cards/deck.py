@@ -46,7 +46,7 @@ class Deck:
     def shuffle(self) -> None:
         random.shuffle(self.cards)
 
-    def draw_card(self) -> [Card]:
+    def draw_card(self) -> list[Card]:
         if not self.is_empty():
             return self.cards.pop()
         else:
@@ -56,12 +56,15 @@ class Deck:
     def is_empty(self) -> bool:
         return len(self.cards) == 0
 
-    def return_cards(self, cards: [Card]) -> None:
+    def return_cards(self, cards: list) -> None:
         self.cards.extend(cards)
 
     def __str__(self) -> str:
         deck_str = ", ".join(str(card) for card in self.cards)
         return f"Deck of Cards: {deck_str}"
+    
+    def __iter__(self):
+        return 
 
 class Hand(Deck):
     def __init__(self):
@@ -83,10 +86,11 @@ class Hand(Deck):
         self.hidden_cards.extend(cards)
 
     def played_cards(self) -> str:
-        return 'Played Cards: ' + ', '.join([card for card in self.showing_cards])
+        return 'Played Cards: ' + ','.join([str(card) for card in self.showing_cards])
 
     def show_hidden_cards(self) -> str:
-        return "Still in Hand: " + ", ".join([card for card in self.showing_cards])
+        display = ','.join([str(card) for card in self.hidden_cards])
+        return "Still in Hand: " + display
     
     def __str__(self) -> str:
         return self.show_hidden_cards() + ' ' + self.played_cards()
@@ -100,7 +104,7 @@ def main() -> None:
     # Draw and print 5 cards from the deck
     for _ in range(5):
         card = my_deck.draw_card()
-        hand.get_cards(card)
+        hand.get_cards([card])
     
     print(hand)
 if __name__=="__main__":
