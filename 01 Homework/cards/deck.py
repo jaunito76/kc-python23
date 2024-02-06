@@ -45,7 +45,8 @@ class Card:
     def __eq__(self, other):
         return self.value == other.value
     
-    def __lt__
+    def __lt__(self, other):
+        return self.value < other.value
 
 class Deck:
     def __init__(self):
