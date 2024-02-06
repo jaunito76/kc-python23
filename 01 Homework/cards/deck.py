@@ -31,7 +31,7 @@ class Card:
         return f"{ranks_symbols[self.rank]}{suits_symbols[self.suit]}"
 
     def __str__(self) -> str:
-        return f"{self.symbol}"
+        return f"{self.symbol:>3}"
 
 class Deck:
     def __init__(self):
@@ -46,12 +46,12 @@ class Deck:
     def shuffle(self) -> None:
         random.shuffle(self.cards)
 
-    def draw_card(self) -> list[Card]:
+    def draw_card(self) -> Card:
         if not self.is_empty():
             return self.cards.pop()
         else:
-            print("Deck is empty. Cannot draw a card.")
-            return None
+            raise EOFError('No cards remaining in the deck')
+            
 
     def is_empty(self) -> bool:
         return len(self.cards) == 0
@@ -77,11 +77,11 @@ class Hand(Deck):
         self.cards.remove(card)
         return card
 
-    def play(self, cards: [Card]) -> None:
+    def play(self, cards: list[Card]) -> None:
         self.hidden_cards.remove(cards)
         self.showing_cards.extend(cards)
 
-    def get_cards(self, cards: [Card]) -> None:
+    def get_cards(self, cards: list[Card]) -> None:
         self.return_cards(cards)
         self.hidden_cards.extend(cards)
 
@@ -95,17 +95,9 @@ class Hand(Deck):
     def __str__(self) -> str:
         return self.show_hidden_cards() + ' ' + self.played_cards()
 
-def main() -> None:
-    # Example usage:
-    my_deck = Deck()
-    my_deck.shuffle()
-    hand = Hand()
+def main():
+    pass
 
-    # Draw and print 5 cards from the deck
-    for _ in range(5):
-        card = my_deck.draw_card()
-        hand.get_cards([card])
-    
-    print(hand)
+    # print(hand)
 if __name__=="__main__":
     main()
