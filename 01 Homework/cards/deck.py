@@ -30,8 +30,22 @@ class Card:
         }
         return f"{ranks_symbols[self.rank]}{suits_symbols[self.suit]}"
 
+    def same_suit(self, card) -> bool:
+        return card.suit == self.suit
+    
+    def same_face(self, card) -> bool:
+        return card.value == self.value
+
     def __str__(self) -> str:
         return f"{self.symbol:>3}"
+    
+    def __gt__(self, other):
+        return self.value > other.value
+    
+    def __eq__(self, other):
+        return self.value == other.value
+    
+    def __lt__
 
 class Deck:
     def __init__(self):
