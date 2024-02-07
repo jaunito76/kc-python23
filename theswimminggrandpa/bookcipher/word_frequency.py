@@ -11,6 +11,7 @@ def word_frequency(file_name: str) -> dict:
         {<WORD: str>: <count_of_word: int>} that contains the 
         number of times a word is used in the file above
     """
+    #   Sample word freq = {'bill':3, 'and':12, 'the':75}
     #   Open the file
     #   read the file
     #   close the file
@@ -22,7 +23,17 @@ def word_frequency(file_name: str) -> dict:
     #       Else
     #           Add word (key) to the dictionary
     #   Return dict
-
+    # To access elements in a dictionary dict[s]
+    freq = {}
+    with open(file_name) as book:
+        words = book.read().split()
+    for word in words:
+        if word in freq:
+            freq[word] +=1
+        else:
+            freq[word] =1   
+    return freq
+ 
 def sort_by_frequency(frequency):
     """
     frequency: dict in the form of 
