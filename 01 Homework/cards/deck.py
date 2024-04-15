@@ -107,7 +107,7 @@ class Hand(Deck):
         except ValueError:
             pass
         try:
-            self.hidden_cards.remove(my_card)
+            self.showing_cards.remove(my_card)
         except ValueError:
             pass
         return my_card

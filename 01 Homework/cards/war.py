@@ -38,7 +38,7 @@ def deal(deck: Deck) -> list['Hand']:
 
 def play_war(hands: list['Hand']) -> str:
     secret_cards: list[Card] = []
-    while not (hands[PLAYER1].is_empty() or hands[PLAYER2].is_empty()):
+    while True:
         # play top card
         card1, is_empty = play_to_empty(hands[PLAYER1])
         if is_empty:
@@ -48,7 +48,7 @@ def play_war(hands: list['Hand']) -> str:
         if is_empty:
             winner = PLAYER1
             break
-        
+
         print(f'Player 1 played {card1}')
         print(f'Player 2 played {card2}')
         print(f'Player 1: {hands[PLAYER1]}')
@@ -68,26 +68,33 @@ def play_war(hands: list['Hand']) -> str:
                 hands[PLAYER2].take_a_trick(secret_cards)
                 secret_cards = []            
         else:
-            print('Its a WAR!')
+            secret_cards = [card1, card2]
+            print('\n******   ITS A WAR! *****\n')
             for _ in range(WARCARDS):
-                try:
-                    secret_cards.append(hands[PLAYER1].play_top())
-                except ValueError:
+                card, is_empty = play_to_empty(hands[PLAYER1])
+                if not is_empty:
+                    secret_cards.append(card)
+                else:
                     winner = PLAYER2
                     break
-                try:
-                    secret_cards.append(hands[PLAYER2].play_top())
-                except ValueError:
+                card, is_empty = play_to_empty(hands[PLAYER2])
+                if not is_empty:
+                    secret_cards.append(card)
+                else:
                     winner = PLAYER1
                     break
-            if len(secret_cards) < WARCARDS * 2:
+            if is_empty:
                 break
         input('Press Enter to continue')
-            
+    if winner == PLAYER1:
+        print('\n\n**** Player 1 WINS THE WAR ****\n\n')
+    else:
+        print("\n\n**** Player 2 WINS THE WAR ****\n\n")
 
-def play_to_empty(hand: Hand) -> tuple(Card, bool):
+
+def play_to_empty(hand: Hand):
     is_empty = False
-    card = Card()
+    card = Card("diamonds", "2")
     try:
         card = hand.play_top()
     except ValueError:
