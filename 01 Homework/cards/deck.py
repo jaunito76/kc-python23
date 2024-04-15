@@ -30,9 +30,30 @@ class Card:
         }
         return f"{ranks_symbols[self.rank]}{suits_symbols[self.suit]}"
 
+    def same_suit(self, card) -> bool:
+        return card.suit == self.suit
+    
+    def same_face(self, card) -> bool:
+        return card.rank == self.rank
+
     def __str__(self) -> str:
         return f"{self.symbol:>3}"
-
+    
+    def __gt__(self, other: 'Card') -> bool:
+        return self.rank > other.rank
+    
+    def __eq__(self, other: 'Card') -> bool:
+        return self.rank == other.rank and self.suit == other.suit
+    
+    def __lt__(self, other: 'Card') -> bool:
+        return self.rank < other.rank
+    
+    def __ge__(self, other: 'Card') -> bool:
+        return self.rank >= other.rank
+    
+    def __le__(self, other: 'Card') -> bool:
+        return self.rank <= other.rank
+    
 class Deck:
     def __init__(self):
         self.cards = []
@@ -50,13 +71,12 @@ class Deck:
         if not self.is_empty():
             return self.cards.pop()
         else:
-            raise EOFError('No cards remaining in the deck')
-            
+            raise EOFError('No cards remaining in the deck')    
 
     def is_empty(self) -> bool:
         return len(self.cards) == 0
 
-    def return_cards(self, cards: list) -> None:
+    def return_cards_to_deck(self, cards: list[Card]) -> None:
         self.cards.extend(cards)
 
     def __str__(self) -> str:
@@ -77,12 +97,39 @@ class Hand(Deck):
         self.cards.remove(card)
         return card
 
-    def play(self, cards: list[Card]) -> None:
+    def play_top(self) -> Card:
+        if len(self.hidden_cards) == 0:
+            raise ValueError('All cards have been played')
+        
+        my_card = self.hidden_cards.pop()
+        try:
+            self.cards.remove(my_card)
+        except ValueError:
+            pass
+        try:
+            self.hidden_cards.remove(my_card)
+        except ValueError:
+            pass
+        return my_card
+
+    def play(self, cards: list[Card], stays_in_hand: bool = False) -> None:
         self.hidden_cards.remove(cards)
+        if stays_in_hand:
+            self.showing_cards.extend(cards)
+
+    def take_a_trick(self, cards: list[Card]) -> None:
+        try:
+            self.hidden_cards.remove(cards)
+        except:
+            pass
         self.showing_cards.extend(cards)
 
+    def recycle_cards(self) -> None:
+        self.hidden_cards.extend(self.showing_cards)
+        self.showing_cards = []
+
     def get_cards(self, cards: list[Card]) -> None:
-        self.return_cards(cards)
+        self.return_cards_to_deck(cards)
         self.hidden_cards.extend(cards)
 
     def played_cards(self) -> str:
