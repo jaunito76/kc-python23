@@ -33,29 +33,38 @@ def main():
 
     movie_data = []
     for year in movie_years:
-        movie_titles = fetch_movie_titles_by_year(year)
+        #movie_titles = fetch_movie_titles_by_year(year)
+        movie_titles = ['The Matrix', 'The Godfather', 'Star Wars']
         for title in movie_titles:
-            print(f'\n\nTitle: {title}')
             movie_info = fetch_movie_data(title)
             movie_data.append(movie_info)
 
     # Save the data to a JSON file
-    with open('movie_data.json', 'w') as json_file:
+    with open('movie_data2.json', 'w') as json_file:
         json.dump(movie_data, json_file, indent=4)
 
     print("Movie data saved to 'movie_data.json'.")
 
     # Create a DataFrame
     df = pd.DataFrame(movie_data)
+    df2 = pd.DataFrame()
+    for search in df['Search']:
+        print(f'\n\nSearch: {search}\n\n')
+        df2 = pd.concat([df2, pd.DataFrame(search)], ignore_index=True)
+        print(f'\n\nDF: {df}\n\n')
 
     # Display the DataFrame
     print("\nMovie Data:")
-    print(df)
-
+    # print(df2)
+    
     # Plotting
     # Example: Number of movies per year
-    year_counts = df['Year'].value_counts()
-    year_counts.plot(kind='bar', color='skyblue')
+
+    # for search in df['Search']:
+    #     df2 = pd.DataFrame(search)
+    year_counts = df2['Year'].value_counts()
+    year_counts_sorted = year_counts.sort_index()
+    year_counts_sorted.plot(kind='bar', color='skyblue')
     plt.title('Number of Movies Released Each Year')
     plt.xlabel('Year')
     plt.ylabel('Number of Movies')
