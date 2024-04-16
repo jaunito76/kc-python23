@@ -95,4 +95,3 @@ class ConnectFour:
 # Start the game
 game = ConnectFour()
 game.play_game()
-``
