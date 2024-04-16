@@ -22,6 +22,7 @@ class ConnectFour:
             str: returns the player that won the game
         """
         while True:
+            print(self)
             column = int(input('Enter your column [1-7]: '))
             column -= 1
             if self.check_valid_move(column):
@@ -29,10 +30,12 @@ class ConnectFour:
                 if self.check_winner():
                     break
                 self.change_player()
-                while not self.check_valid_move(column=self.get_ai_move()):
-                    pass
-                self.place_move(column)
+                self.place_move(self.get_ai_move())
+                if self.check_winner():
+                    break
                 self.change_player()
+        print(self)
+        print(f'Player {self.player + 1} WINS!')
                 
     def check_valid_move(self, col: int) -> bool:
         """Checks to see if the move is valid (i.e. there is room in the column)
@@ -58,15 +61,67 @@ class ConnectFour:
                 break
                 
     def check_winner(self) -> bool:
-        pass
+        return (
+            self.check_verticle() 
+            or self.check_horizontal() 
+            or self.check_up_right() 
+            or self.check_down_right()
+        )
+    
+    def check_verticle(self) -> bool:
+        for col in range(self.WIDTH):
+            num_pieces = 0
+            for row in range(self.HEIGHT):
+                if self.board[row][col] == self.players[self.player]:
+                    num_pieces += 1
+                    if num_pieces == 4: 
+                        return True
+                else:
+                    num_pieces = 0
+        return False
+    
+    def check_horizontal(self) -> bool:
+        for row in range(self.HEIGHT):
+            num_pieces = 0
+            for col in range(self.WIDTH):
+                if self.board[row][col] == self.players[self.player]:
+                    num_pieces += 1
+                    if num_pieces == 4: 
+                        return True
+                else:
+                    num_pieces = 0
+        return False
+    
+    def check_up_right(self):
+        # /
+        # [3][0] // [2][1] // [1][2] // [0][3]
+        for row in range(3, self.HEIGHT):
+            for col in range(self.WIDTH -3):
+                if all(self.board[row - i][col + i] == self.players[self.player] for i in range(4)):
+                    return True
+        return False
+    
+    def check_down_right(self):
+        # [0][0] // [1][1] // [2][2] // [3][3]
+        # [1][0] // [2][1] // ...
+        for row in range(self.HEIGHT - 3):
+            for col in range(self.WIDTH - 3):
+                if all(self.board[row + i][col + i] == self.players[self.player] for i in range(4)):
+                    return(True)
+        return False
+                    
     def change_player(self) -> None:
         self.player = (self.player + 1) % 2
+        
     def get_ai_move(self) -> int:
-        return random.random(self.WIDTH)
+        column=random.randrange(self.WIDTH)
+        while not self.check_valid_move(column):
+            column=random.randrange(self.WIDTH)
+        return column
 
 def main():
     c4 = ConnectFour() 
-    print(c4)
+    c4.play_game()
     
 if __name__=="__main__":
     main()
