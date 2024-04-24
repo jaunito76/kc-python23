@@ -1,0 +1,230 @@
+[
+    {
+        "Search": [
+            {
+                "Title": "The Matrix",
+                "Year": "1999",
+                "imdbID": "tt0133093",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Matrix Reloaded",
+                "Year": "2003",
+                "imdbID": "tt0234215",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BODE0MzZhZTgtYzkwYi00YmI5LThlZWYtOWRmNWE5ODk0NzMxXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Matrix Revolutions",
+                "Year": "2003",
+                "imdbID": "tt0242653",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNzNlZTZjMDctZjYwNi00NzljLWIwN2QtZWZmYmJiYzQ0MTk2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Matrix Resurrections",
+                "Year": "2021",
+                "imdbID": "tt10838180",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMGJkNDJlZWUtOGM1Ny00YjNkLThiM2QtY2ZjMzQxMTIxNWNmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Making 'The Matrix'",
+                "Year": "1999",
+                "imdbID": "tt0365467",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZjJjMTg5MTEtMDkwMy00ZjUyLTg5ODYtMmNmY2ZiNGVlZTdjXkEyXkFqcGdeQXVyODA1NjQ0OTY@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Matrix Revisited",
+                "Year": "2001",
+                "imdbID": "tt0295432",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTkzNjg3NjE4N15BMl5BanBnXkFtZTgwNTc3NTAwNzE@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Enter the Matrix",
+                "Year": "2003",
+                "imdbID": "tt0277828",
+                "Type": "game",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNWM3MDU2MWQtYjdlNC00NDBlLTkyNGMtNjdhYjdlNTdiNTFlXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg"
+            },
+            {
+                "Title": "A Glitch in the Matrix",
+                "Year": "2021",
+                "imdbID": "tt9847360",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMWRhNGY3NGQtMDAxMS00YjY2LTgzOTUtZjljZmUyYWQwMGI2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Matrix: Path of Neo",
+                "Year": "2005",
+                "imdbID": "tt0451118",
+                "Type": "game",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZGFiNGU4MjEtODM2ZC00OTg0LThkNmEtZTBlN2FkMmFjOWYzXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg"
+            },
+            {
+                "Title": "CR: Enter the Matrix",
+                "Year": "2009",
+                "imdbID": "tt1675286",
+                "Type": "game",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTExMzY3NTQ1NjleQTJeQWpwZ15BbWU3MDAyMjk2NzM@._V1_SX300.jpg"
+            }
+        ],
+        "totalResults": "95",
+        "Response": "True"
+    },
+    {
+        "Search": [
+            {
+                "Title": "The Godfather",
+                "Year": "1972",
+                "imdbID": "tt0068646",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Godfather Part II",
+                "Year": "1974",
+                "imdbID": "tt0071562",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Godfather Part III",
+                "Year": "1990",
+                "imdbID": "tt0099674",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNWFlYWY2YjYtNjdhNi00MzVlLTg2MTMtMWExNzg4NmM5NmEzXkEyXkFqcGdeQXVyMDk5Mzc5MQ@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Godfather Trilogy: 1901-1980",
+                "Year": "1992",
+                "imdbID": "tt0150742",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMjk5ODZjYmMtYTJjNy00MTU2LWI5OTYtYTg5YjFlMDk3ZjI0XkEyXkFqcGdeQXVyODAyNDE3Mw@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Godfather Saga",
+                "Year": "1977",
+                "imdbID": "tt0809488",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNzk3NmZmMjgtMjA4NS00MjdkLTlkZmMtZGFkMDAyNWU4NDdlXkEyXkFqcGdeQXVyODAyNDE3Mw@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Miracles: The Canton Godfather",
+                "Year": "1989",
+                "imdbID": "tt0098019",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYThlMDRmNDYtNDU3YS00YmRkLTg0MWYtODIzZjM3MzViZDU3XkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Godfather",
+                "Year": "2006",
+                "imdbID": "tt0442674",
+                "Type": "game",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTQyNTE4NzMzNF5BMl5BanBnXkFtZTgwMDgzNTY3MDE@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Black Godfather",
+                "Year": "2019",
+                "imdbID": "tt10289996",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZmFhNjM5MTItZDRkNS00ZjUyLTkyMWUtZjg1YWZjMjFlYjg0XkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Last Godfather",
+                "Year": "2010",
+                "imdbID": "tt1584131",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTYxNTgzOTQyNV5BMl5BanBnXkFtZTcwMzI1NDk3NA@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "The Godfather Family: A Look Inside",
+                "Year": "1990",
+                "imdbID": "tt0101961",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZTMyNzE0NWEtOGZjYi00ODU0LWE0OTItMzY5YTllYTcyYzgyXkEyXkFqcGdeQXVyODAyNDE3Mw@@._V1_SX300.jpg"
+            }
+        ],
+        "totalResults": "92",
+        "Response": "True"
+    },
+    {
+        "Search": [
+            {
+                "Title": "Star Wars: Episode IV - A New Hope",
+                "Year": "1977",
+                "imdbID": "tt0076759",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode V - The Empire Strikes Back",
+                "Year": "1980",
+                "imdbID": "tt0080684",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode VI - Return of the Jedi",
+                "Year": "1983",
+                "imdbID": "tt0086190",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode VII - The Force Awakens",
+                "Year": "2015",
+                "imdbID": "tt2488496",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode I - The Phantom Menace",
+                "Year": "1999",
+                "imdbID": "tt0120915",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode III - Revenge of the Sith",
+                "Year": "2005",
+                "imdbID": "tt0121766",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode II - Attack of the Clones",
+                "Year": "2002",
+                "imdbID": "tt0121765",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Rogue One: A Star Wars Story",
+                "Year": "2016",
+                "imdbID": "tt3748528",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode VIII - The Last Jedi",
+                "Year": "2017",
+                "imdbID": "tt2527336",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg"
+            },
+            {
+                "Title": "Star Wars: Episode IX - The Rise of Skywalker",
+                "Year": "2019",
+                "imdbID": "tt2527338",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SX300.jpg"
+            }
+        ],
+        "totalResults": "867",
+        "Response": "True"
+    }
+]
